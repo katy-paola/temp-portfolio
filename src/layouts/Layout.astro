@@ -1,5 +1,6 @@
 ---
 import '../styles/style.css';
+import { SEO } from 'astro-seo';
 
 interface Props {
   title: string;
@@ -12,11 +13,12 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="preconnect"
@@ -26,6 +28,19 @@ const { title } = Astro.props;
     <link
       href="https://fonts.googleapis.com/css2?family=Itim&family=Poppins:ital,wght@0,400;0,500;1,600&display=swap"
       rel="stylesheet"
+    />
+
+    <SEO
+      title={title}
+      description="I'm Katy Barboza UX/UI Designer & Frontend Web Developer"
+      openGraph={{
+        basic: {
+          title: title,
+          type: 'portfolio',
+          image: '/images/banner-seo.jpg',
+          url: 'https://katy-barboza.vercel.app',
+        },
+      }}
     />
   </head>
   <body>
