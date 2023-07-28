@@ -45,6 +45,7 @@ body{
     padding: 0 1.6rem;
     justify-content: start;
     width: 100%;
+    min-width: 320px;
 }
 .section{
     display: flex;
@@ -103,6 +104,7 @@ body{
     padding: .4rem 2rem;
     width: 100%;
     border-radius: 3.2rem;
+    cursor: pointer;
     background-color: var(--light);
 }
 .section__button{
@@ -110,6 +112,7 @@ body{
     font-size: var(--lg);
     font-weight: var(--medium);
     border: none;
+    cursor: pointer;
     color: var(--white);
     background-color: transparent;
 }
@@ -121,6 +124,7 @@ body{
     flex-direction: column;
     gap: 1.6rem;
     padding: 1.6rem 0;
+    max-width: 900px;
 }
 .main__subtitle{
     font-size: var(--md);
@@ -287,5 +291,75 @@ body{
     .footer__icon{
         width: 1.4rem;
         height: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 884px) {
+    .container{
+        min-height: 100vh;
+        justify-content: center;
+    }
+    .main__projects{
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    :root{
+        --xs: 1.4rem;
+        --sm: 1.6rem;
+        --md: 2.4rem;
+        --xl: 5.2rem;
+    }
+    .container{
+        padding: 0 20rem;
+    }
+    .contents{
+        display: flex;
+        gap: 3.2rem;
+    }
+    .contents--info{
+        flex-direction: column;
+        justify-content: center;
+        gap: .8rem;
+    }
+    .section__data{
+        align-items: flex-start;
+    }
+    .section__name{
+        font-size: var(--xl);
+    }
+    .section__role{
+        font-size: var(--md);
+    }
+    .section__social-media{
+        padding: 1.6rem 0;
+    }
+    .main__project{
+        flex-direction: column;
+    }
+    .main__image{
+        width: 28.533rem;
+        height: 28.533rem;
+    }
+    .main__content{
+        justify-content: center;
+        gap: 2rem;
+    }
+    .main__project-title{
+        font-size: var(--sm);
+    }
+    .main__category{
+        font-size: var(--xs);
+    }
+    .main__button{
+        font-size: var(--sm);
+    }
+    .footer__text{
+        font-size: var(--xs);
+    }
+    .footer__icon{
+        width: 1.6rem;
+        height: 1.6rem;
     }
 }
