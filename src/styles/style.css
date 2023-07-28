@@ -48,6 +48,7 @@ body {
     padding: 0 1.6rem;
     justify-content: start;
     width: 100%;
+    min-width: 320px;
 }
 
 .section {
@@ -69,6 +70,8 @@ body {
 }
 
 .section__profile {
+    width: 8rem;
+    height: 8rem;
     border-radius: 50%;
 }
 
@@ -115,6 +118,7 @@ body {
     padding: .4rem 2rem;
     width: 100%;
     border-radius: 3.2rem;
+    cursor: pointer;
     background-color: var(--light);
 }
 
@@ -123,6 +127,7 @@ body {
     font-size: var(--lg);
     font-weight: var(--medium);
     border: none;
+    cursor: pointer;
     color: var(--white);
     background-color: transparent;
 }
@@ -136,6 +141,8 @@ body {
     flex-direction: column;
     gap: 1.6rem;
     padding: 1.6rem 0;
+    max-width: 900px;
+    margin: auto;
 }
 
 .main__subtitle {
@@ -170,6 +177,11 @@ body {
     align-items: center;
 }
 
+.main__image {
+    width: 8.4rem;
+    height: 8.4rem;
+}
+
 .main__project-title {
     width: max-content;
     font-size: var(--sm);
@@ -202,6 +214,7 @@ body {
 .footer__content {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: .4rem;
 }
 
@@ -237,5 +250,185 @@ body {
 
     .main__button {
         width: max-content;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .main__projects {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 744px) {
+    :root {
+        --xs: 1.2rem;
+        --sm: 1.4rem;
+        --md: 1.6rem;
+        --lg: 1.8rem;
+        --xl: 3.6rem;
+    }
+
+    .container {
+        padding: 0 8rem;
+    }
+
+    .section {
+        gap: 4rem;
+        padding: 4rem 0;
+    }
+
+    .section__profile {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .section__name {
+        font-size: var(--xl);
+    }
+
+    .section__role {
+        font-size: var(--md);
+    }
+
+    .section__button {
+        font-size: var(--lg);
+    }
+
+    .section__icon {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .main__subtitle {
+        font-size: var(--lg);
+    }
+
+    .main__projects {
+        flex-direction: column;
+    }
+
+    .main__project {
+        width: fit-content;
+    }
+
+    .main__image {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .main__content {
+        padding: 1.6rem;
+        flex: 1;
+    }
+
+    .main__project-title {
+        font-size: var(--md);
+    }
+
+    .main__category {
+        font-size: var(--sm);
+    }
+
+    .main__button {
+        width: 100%;
+        padding: .4rem 1.6rem;
+        font-size: var(--md);
+    }
+
+    .footer__text {
+        font-size: var(--xs);
+    }
+
+    .footer__icon {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 884px) {
+    .container {
+        min-height: 100vh;
+        justify-content: center;
+    }
+
+    .main__projects {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    :root {
+        --xs: 1.4rem;
+        --sm: 1.6rem;
+        --md: 2.4rem;
+        --xl: 5.2rem;
+    }
+
+    .container {
+        padding: 0 20rem;
+    }
+
+    .contents {
+        display: flex;
+        gap: 3.2rem;
+    }
+
+    .contents--info {
+        flex-direction: column;
+        justify-content: center;
+        gap: .8rem;
+    }
+
+    .section__data {
+        align-items: flex-start;
+    }
+
+    .section__name {
+        font-size: var(--xl);
+    }
+
+    .section__role {
+        font-size: var(--md);
+    }
+
+    .section__social-media {
+        padding: 1.6rem 0;
+    }
+
+    .main__project {
+        flex-direction: column;
+    }
+
+    .main__image {
+        width: 28.533rem;
+        height: 28.533rem;
+    }
+
+    .main__content {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .main__project-title {
+        font-size: var(--sm);
+    }
+
+    .main__category {
+        font-size: var(--xs);
+    }
+
+    .main__button {
+        font-size: var(--sm);
+    }
+
+    .footer__text {
+        font-size: var(--xs);
+    }
+
+    .footer__icon {
+        width: 1.6rem;
+        height: 1.6rem;
     }
 }
