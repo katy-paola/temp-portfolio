@@ -1,0 +1,23 @@
+---
+interface Props {
+  image: string;
+  title: string;
+  category: string;
+  link: string;
+}
+
+const { category, image, link, title } = Astro.props;
+---
+
+<article class="main__project">
+  <figure class="main__figure">
+    <img src={`/images/${image}`} alt="" class="main__image" />
+  </figure>
+  <section class="main__content">
+    <h3 class="main__project-title">{title}</h3>
+    <p class="main__category">Category: {category}</p>
+    <a href={link} class="main__button" target="_blank"
+      >View proyect</a
+    >
+  </section>
+</article>
