@@ -62,6 +62,8 @@ body{
     align-items: center;
 }
 .section__profile{
+    width: 8rem;
+    height: 8rem;
     border-radius: 50%;
 }
 .section__data{
@@ -147,6 +149,10 @@ body{
     justify-content: center;
     align-items: center;
 }
+.main__image{
+    width: 8.4rem;
+    height: 8.4rem;
+}
 .main__project-title{
     width: max-content;
     font-size: var(--sm);
@@ -175,6 +181,7 @@ body{
 .footer__content{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: .4rem;
 }
 .footer__text{
@@ -203,5 +210,82 @@ body{
     }
     .main__button{
         width: max-content;
+    }
+}
+
+@media screen and (min-width: 550px){
+    .main__projects{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 744px){
+    :root{
+        --xs: 1.2rem;
+        --sm: 1.4rem;
+        --md: 1.6rem;
+        --lg: 1.8rem;
+        --xl: 3.6rem;
+    }
+    .container{
+        padding: 0 8rem;
+    }
+    .section{
+        gap: 4rem;
+        padding: 4rem 0;
+    }
+    .section__profile{
+        width: 16rem;
+        height: 16rem;
+    }
+    .section__name{
+        font-size: var(--xl);
+    }
+    .section__role{
+        font-size: var(--md);
+    }
+    .section__button{
+        font-size: var(--lg);
+    }
+    .section__icon{
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+    .main__subtitle{
+        font-size: var(--lg);
+    }
+    .main__projects{
+        flex-direction: column;
+    }
+    .main__project{
+        width: fit-content;
+    }
+    .main__image{
+        width: 16rem;
+        height: 16rem;
+    }
+    .main__content{
+        padding: 1.6rem;
+        flex: 1;
+    }
+    .main__project-title{
+        font-size: var(--md);
+    }
+    .main__category{
+        font-size: var(--sm);
+    }
+    .main__button{
+        width: 100%;
+        padding: .4rem 1.6rem;
+        font-size: var(--md);
+    }
+    .footer__text{
+        font-size: var(--xs);
+    }
+    .footer__icon{
+        width: 1.4rem;
+        height: 1.4rem;
     }
 }
